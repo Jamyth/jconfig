@@ -1,0 +1,15 @@
+# Node Modules
+**/node_modules/**
+
+# Misc
+**/.DS_Store
+**/yarn-error.log
+**/npm-debug.log
+
+# Build
+**/dist/**
+
+# IDE
+/.idea/**
+/.vscode/**
+

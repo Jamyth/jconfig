@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2017"],
+    "target": "ES2015",
+    "module": "ESNext",
+    "noEmit": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "checkJs": true,
+
+    "strict": true,
+    "importsNotUsedAsValues": "error",
+    "forceConsistentCasingInFileNames": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "exclude": ["node_modules"]
+}
