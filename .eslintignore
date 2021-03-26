@@ -1,13 +1,14 @@
 # Node Modules
 **/node_modules/**
 
+# build
+**/dist/**
+
 # Misc
 **/.DS_Store
 **/.npm-debug.log
 **/.yarn-error.log
 
-# Config
-**/.eslintrc.json
 
 # IDE
 /.idea/**
