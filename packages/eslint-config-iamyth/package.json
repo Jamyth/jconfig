@@ -1,0 +1,8 @@
+{
+  "name": "@iamyth/eslint-config-iamyth",
+  "version": "0.0.1",
+  "description": "eslint config",
+  "main": "index.js",
+  "author": "Jamyth",
+  "license": "MIT"
+}
