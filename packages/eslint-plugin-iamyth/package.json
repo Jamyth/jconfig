@@ -10,13 +10,16 @@
   },
   "devDependencies": {
     "@types/yargs": "16.0.1",
+    "mocha": "8.3.2",
     "ts-node": "9.1.1",
     "typescript": "4.2.3",
     "yargs": "16.2.0"
   },
   "scripts": {
-      "run-script": "ts-node --project script/tsconfig.json",
-      "new-rule": "yarn run-script script/new-rule.ts",
-      "codegen": "yarn run-script script/codegen.ts"
+    "run-script": "ts-node --project script/tsconfig.json",
+    "new-rule": "yarn run-script script/new-rule.ts",
+    "codegen": "yarn run-script script/codegen.ts",
+    "build": "tsc --project tsconfig.json",
+    "test": "mocha --require ts-node/register ./test/**/*.ts"
   }
 }

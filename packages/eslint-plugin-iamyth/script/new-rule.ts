@@ -7,6 +7,7 @@ const directory = {
     src: path.join(__dirname, '../src'),
     srcRules: path.join(__dirname, '../src/rules'),
     template: path.join(__dirname, '../script/template'),
+    testRules: path.join(__dirname, '../test/rules'),
 };
 
 const newRuleName = yargs.argv._[0];
@@ -15,6 +16,7 @@ if (typeof newRuleName !== 'string') {
 }
 
 const newRuleFile = path.join(directory.srcRules, `${newRuleName}.ts`);
+const newTestFile = path.join(directory.testRules, `${newRuleName}.test.ts`);
 
 console.info('Check pre condition');
 if (!NamingUtil.isKebabCase(newRuleName)) {
@@ -33,4 +35,14 @@ const output = fs
     .replaceAll('// {{KEBAB_CASE_RULE_NAME}}', newRuleName)
     .replaceAll('// {{CAMEL_CASE_RULE_NAME}}', NamingUtil.toCamelCase(newRuleName));
 fs.writeFileSync(newRuleFile, output, { encoding: 'utf8' });
+
+const templateTestFile = path.join(directory.template, 'new-test.ts');
+const output_1 = fs
+    .readFileSync(templateTestFile, {
+        encoding: 'utf8',
+    })
+    .replaceAll('// {{KEBAB_CASE_RULE_NAME}}', newRuleName)
+    .replaceAll('// {{CAMEL_CASE_RULE_NAME}}', NamingUtil.toCamelCase(newRuleName));
+fs.writeFileSync(newTestFile, output_1, { encoding: 'utf8' });
+
 require('./codegen');
