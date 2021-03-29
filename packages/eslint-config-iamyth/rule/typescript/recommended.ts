@@ -9,7 +9,6 @@ const config: Linter.Config = {
     rules: {
         '@typescript-eslint/adjacent-overload-signatures': ['error'],
         '@typescript-eslint/array-type': ['error', { default: 'array', readonly: 'array' }],
-        '@typescript-eslint/await-thenable': ['error'],
         '@typescript-eslint/ban-ts-comment': [
             'error',
             {
@@ -38,7 +37,6 @@ const config: Linter.Config = {
                 },
             },
         ],
-        '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
         '@typescript-eslint/consistent-type-assertions': [
             'error',
             {
@@ -51,7 +49,7 @@ const config: Linter.Config = {
         '@typescript-eslint/explicit-member-accessibility': [
             'error',
             { accessibility: 'no-public', overrides: { parameterProperties: 'off' } },
-        ], // constructor(public readonly a: string){}
+        ],
         '@typescript-eslint/explicit-module-boundary-types': ['off'],
         '@typescript-eslint/member-ordering': [
             'error',
@@ -83,7 +81,6 @@ const config: Linter.Config = {
         '@typescript-eslint/no-extra-non-null-assertion': ['error'],
         '@typescript-eslint/no-inferrable-types': 'off',
         '@typescript-eslint/no-misused-new': ['error'],
-        '@typescript-eslint/no-misused-promises': ['error'],
         '@typescript-eslint/no-namespace': ['error', { allowDeclarations: true, allowDefinitionFiles: true }],
         '@typescript-eslint/no-non-null-asserted-optional-chain': ['error'],
         '@typescript-eslint/no-non-null-assertion': ['error'],
@@ -98,7 +95,16 @@ const config: Linter.Config = {
         '@typescript-eslint/prefer-namespace-keyword': ['error'],
         '@typescript-eslint/triple-slash-reference': ['error'],
         '@typescript-eslint/no-empty-function': 'off',
+
+        //
+        // Extension Rules
+        //
+
+        '@typescript-eslint/no-array-constructor': ['error'],
+        'no-array-constructor': 'off',
         'no-empty-function': 'off',
+        '@typescript-eslint/no-extra-semi': ['error'],
+        'no-extra-semi': 'off',
         '@typescript-eslint/no-use-before-define': [
             'error',
             {
