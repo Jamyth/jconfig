@@ -6,6 +6,7 @@ const directory = {
     src: path.join(__dirname, '../src'),
     srcRules: path.join(__dirname, '../src/rules'),
     template: path.join(__dirname, '../script/template'),
+    recommended: path.join(__dirname, '../src/config/recommended.ts'),
 };
 
 function scanCustomRules() {
@@ -51,3 +52,27 @@ const output = (function () {
 })();
 
 fs.writeFileSync(rulesIndexFile, output, { encoding: 'utf8' });
+
+console.info('generate src/config/recommended,ts');
+
+const configFile = path.join(directory.src, `config/recommended.ts`);
+if (fs.existsSync(configFile) && fs.statSync(configFile).isFile()) {
+    console.info(`Removing config/recommended.ts`);
+    fs.unlinkSync(configFile);
+}
+
+const output_1 = (function () {
+    console.info(`Generating config/recommended.ts`);
+    const ruleDefinitions = allRules
+        .map((_) => {
+            return `"iamyth/${_.kebab}": ["error"],`;
+        })
+        .join('\n        ');
+    return fs
+        .readFileSync(path.join(directory.template, 'config.ts'), {
+            encoding: 'utf8',
+        })
+        .replace('// {{TEMPLATE_RULE_DEFINITIONS}}', ruleDefinitions);
+})();
+
+fs.writeFileSync(configFile, output_1, { encoding: 'utf8' });

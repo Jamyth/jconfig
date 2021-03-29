@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-iamyth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An ESLint plugin with custom rules",
   "main": "dist/index.js",
   "author": "Jamyth",
