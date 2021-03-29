@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "importsNotUsedAsValues": "error",
+        "skipLibCheck": true,
+
+        "moduleResolution": "node"
+    }
+}

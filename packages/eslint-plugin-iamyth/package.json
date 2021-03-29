@@ -1,0 +1,22 @@
+{
+  "name": "eslint-plugin-iamyth",
+  "version": "1.0.0",
+  "description": "An ESLint plugin with custom rules",
+  "main": "dist/index.js",
+  "author": "Jamyth",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/experimental-utils": "4.19.0"
+  },
+  "devDependencies": {
+    "@types/yargs": "16.0.1",
+    "ts-node": "9.1.1",
+    "typescript": "4.2.3",
+    "yargs": "16.2.0"
+  },
+  "scripts": {
+      "run-script": "ts-node --project script/tsconfig.json",
+      "new-rule": "yarn run-script script/new-rule.ts",
+      "codegen": "yarn run-script script/codegen.ts"
+  }
+}

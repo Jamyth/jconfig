@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "../config/tsconfig.base.json",
+    "compilerOptions": {
+        "lib": ["DOM", "ES2020", "ESNext.String"],
+        "target": "ES2015",
+        "module": "CommonJS",
+        "noEmit": true,
+        "rootDir": "../script"
+    },
+    "include": ["../script"]
+}

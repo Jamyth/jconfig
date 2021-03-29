@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "lib": ["ES2017", "ESNext"],
+        "module": "CommonJS",
+        "target": "ES2015",
+        "declaration": true,
+        "rootDir": "../src"
+    },
+    "include": ["../src"]
+}
