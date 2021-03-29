@@ -6,7 +6,13 @@
 
 import type { RuleListener, RuleModule } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
 import {rule as deepNestedRelativeImports} from "./deep-nested-relative-imports";
+import {rule as orderStylesheetImportStatementLast} from "./order-stylesheet-import-statement-last";
+import {rule as restrictedImports} from "./restricted-imports";
+import {rule as unnecessaryEndingIndex} from "./unnecessary-ending-index";
 
 export const rules: Record<string, RuleModule<string, any[], RuleListener>> = {
     "deep-nested-relative-imports": deepNestedRelativeImports,
+    "order-stylesheet-import-statement-last": orderStylesheetImportStatementLast,
+    "restricted-imports": restrictedImports,
+    "unnecessary-ending-index": unnecessaryEndingIndex,
 };

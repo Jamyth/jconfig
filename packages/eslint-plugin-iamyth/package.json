@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "author": "Jamyth",
   "license": "MIT",
+  "files": ["dist/**"],
   "dependencies": {
     "@typescript-eslint/experimental-utils": "4.19.0"
   },
