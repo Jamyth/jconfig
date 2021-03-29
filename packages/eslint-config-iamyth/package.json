@@ -11,7 +11,8 @@
       "eslint-plugin-eslint-comments": "*",
       "eslint-plugin-react": "*",
       "eslint-plugin-react-hooks": "*",
-      "eslint-plugin-sonarjs": "*"
+      "eslint-plugin-sonarjs": "*",
+      "eslint-plugin-iamyth": "*"
     },
     "peerDependencies": {
       "eslint": "*"

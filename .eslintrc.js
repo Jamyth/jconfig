@@ -4,6 +4,7 @@ require('ts-node').register({ transpileOnly: true });
 const config = {
     extends: [
         require.resolve('./tools/dogfood-eslint/eslint-recommended'),
+        require.resolve('./tools/dogfood-eslint/iamyth-eslint-recommended.js'),
         require.resolve('./tools/dogfood-eslint/eslint-config-prettier'),
     ],
     parserOptions: {

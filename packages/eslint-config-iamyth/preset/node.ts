@@ -5,6 +5,7 @@ const config: Linter.Config = {
         require.resolve('../rule/eslint-recommended'),
         require.resolve('../rule/eslint-comments-recommended'),
         require.resolve('../rule/sonarjs-eslint-recommended'),
+        require.resolve('../rule/iamyth-eslint-recommended'),
         require.resolve('../rule/eslint-config-prettier'),
     ],
     overrides: [

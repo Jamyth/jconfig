@@ -899,6 +899,13 @@ eslint-plugin-eslint-comments@3.2.0:
     escape-string-regexp "^1.0.5"
     ignore "^5.0.5"
 
+eslint-plugin-iamyth@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-iamyth/-/eslint-plugin-iamyth-1.0.1.tgz#a0d754b15cd6dcc00444bcb7efd0de974678c78e"
+  integrity sha512-f1FXmcbh3THIJvLClul0KjoRQRES3XRHIQ8YYjfivr5m/1BTiDOljfWjpGNmVbCSvjrSb6b7bOY5D3X0PjFUlg==
+  dependencies:
+    "@typescript-eslint/experimental-utils" "4.19.0"
+
 eslint-plugin-react-hooks@4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
