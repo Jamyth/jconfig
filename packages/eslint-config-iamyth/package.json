@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-iamyth",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "eslint config",
     "main": "index.js",
     "author": "Jamyth",
