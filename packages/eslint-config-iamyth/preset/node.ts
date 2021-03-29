@@ -10,7 +10,7 @@ const config: Linter.Config = {
     overrides: [
         {
             files: ['*.ts'],
-            extends: [require.resolve('../rule/typescript-eslint-recommended.ts')],
+            extends: [require.resolve('../rule/typescript-eslint-recommended')],
         },
     ],
 };
