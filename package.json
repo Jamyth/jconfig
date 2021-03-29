@@ -2,6 +2,7 @@
   "name": "jconfig",
   "description": "Prettier & Eslint configuration",
   "author": "Jamyth",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "12.0.1",
     "@commitlint/config-conventional": "12.0.1",
