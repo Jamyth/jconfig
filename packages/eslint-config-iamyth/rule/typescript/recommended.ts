@@ -55,26 +55,27 @@ const config: Linter.Config = {
         '@typescript-eslint/explicit-module-boundary-types': ['off'],
         '@typescript-eslint/member-ordering': [
             'error',
+            // prettier-ignore
             {
-                memberTypes: [
-                    'signature',
+                default: {
+                    memberTypes: [
+                        'signature',
 
-                    // Fields
-                    'static-field',
-                    'decorated-field',
-                    'instance-field',
-                    'abstract-field',
+                        'public-static-field',     'protected-static-field',     'private-static-field',
+                        'public-static-method',    'protected-static-method',    'private-static-method',
 
-                    // Constructors
-                    'constructor',
+                        'public-decorated-field',  'protected-decorated-field',  'private-decorated-field',
+                        'public-instance-field',   'protected-instance-field',   'private-instance-field',
+                        'public-abstract-field',   'protected-abstract-field',   'private-abstract-field',
 
-                    // Methods
-                    'static-method',
-                    'decorated-method',
-                    'instance-method',
-                    'abstract-method',
-                ],
-                order: 'as-written',
+                        'public-constructor',      'protected-constructor',      'private-constructor',
+
+                        'public-decorated-method', 'protected-decorated-method', 'private-decorated-method',
+                        'public-instance-method',  'protected-instance-method',  'private-instance-method',
+                        'public-abstract-method',  'protected-abstract-method',  'private-abstract-method',
+                    ],
+                    order: 'as-written',
+                }
             },
         ],
         '@typescript-eslint/no-empty-interface': ['off'],
