@@ -62,6 +62,7 @@ const config = {
             tsconfig: joinRoot('tsconfig.json'),
             module: 'ESNext',
             removeComments: true,
+            exclude: "**/eslint-plugin-iamyth/**"
         }),
         pluginTerser({
             mangle: false,

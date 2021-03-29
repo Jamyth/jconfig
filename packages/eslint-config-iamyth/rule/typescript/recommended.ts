@@ -119,7 +119,7 @@ const config: Linter.Config = {
         'no-use-before-define': 'off',
         '@typescript-eslint/no-useless-constructor': ['error'],
         'no-useless-constructor': 'off',
-        '@typescript-eslint/no-shadow': ['error'],
+        '@typescript-eslint/no-shadow': ['off'],
         'no-shadow': 'off',
         '@typescript-eslint/no-unused-vars': [
             'error',
