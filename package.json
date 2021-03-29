@@ -27,6 +27,11 @@
     "ts-node": "9.1.1",
     "typescript": "4.2.3"
   },
+  "scripts": {
+      "build:eslint": "rollup --config tools/eslint-config-iamyth/rollup.config.js",
+      "format:eslint": "prettier --write packages/eslint-config-iamyth",
+      "lint:eslint": "eslint --ext .js,.ts packages/eslint-config-iamyth"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
