@@ -17,7 +17,7 @@ const rulesCustom: Linter.Config = {
 
         'react/jsx-boolean-value': ['error', 'never'],
         'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'ignore' }],
-        'react/jsx-fragments': ['error', 'syntax'],
+        'react/jsx-fragments': ['error', 'element'],
         'react/jsx-no-bind': [
             'error',
             {

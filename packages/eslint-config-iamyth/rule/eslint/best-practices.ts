@@ -3,6 +3,7 @@ import type { Linter } from 'eslint';
 const bestPractices: Linter.Config = {
     rules: {
         eqeqeq: ['error', 'always', { null: 'ignore' }],
+        'dot-location': ['error', 'property'],
         'no-case-declarations': ['error'],
         'no-empty-pattern': ['error'],
         'no-eval': ['error', { allowIndirect: true }],
