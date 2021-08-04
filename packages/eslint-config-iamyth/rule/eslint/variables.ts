@@ -21,7 +21,7 @@ const variables: Linter.Config = {
         'no-shadow-restricted-names': ['error'],
         'no-undef': ['error'],
         'no-undef-init': ['error'],
-        'no-unused-vars': ['error', { args: 'none', ignoreRestSiblings: true, varsIgnorePattern: '^_+$' }],
+        'no-unused-vars': ['warn', { args: 'none', ignoreRestSiblings: true, varsIgnorePattern: '^_+$' }],
         'no-use-before-define': [
             'error',
             {

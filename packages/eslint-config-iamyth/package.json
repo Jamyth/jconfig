@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-iamyth",
-    "version": "0.0.7",
+    "version": "0.0.9",
     "description": "eslint config",
     "main": "index.js",
     "author": "Jamyth",
@@ -13,7 +13,8 @@
       "eslint-plugin-react": "*",
       "eslint-plugin-react-hooks": "*",
       "eslint-plugin-sonarjs": "*",
-      "eslint-plugin-iamyth": "*"
+      "eslint-plugin-iamyth": "*",
+      "eslint-plugin-import": "*"
     },
     "peerDependencies": {
       "eslint": "*"

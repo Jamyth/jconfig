@@ -8,6 +8,7 @@ const config: Linter.Config = {
         require.resolve('../rule/sonarjs-eslint-recommended'),
         require.resolve('../rule/iamyth-eslint-recommended'),
         require.resolve('../rule/eslint-config-prettier'),
+        require.resolve('../rule/import'),
     ],
     overrides: [
         {

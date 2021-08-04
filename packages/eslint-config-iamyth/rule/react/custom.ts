@@ -7,7 +7,7 @@ const rulesCustom: Linter.Config = {
             'error',
             { namedComponents: 'arrow-function', unnamedComponents: 'arrow-function' },
         ],
-        'react/no-array-index-key': ['error'],
+        'react/no-array-index-key': ['off'],
         'react/self-closing-comp': ['error'],
         'react/state-in-constructor': ['error', 'always'],
 

@@ -6,7 +6,7 @@ const es6: Linter.Config = {
         'no-class-assign': ['error'],
         'no-const-assign': ['error'],
         'no-dupe-class-members': ['error'],
-        'no-duplicate-imports': 'off',
+        'no-duplicate-imports': 'off', // Use eslint-plugin-import/no-duplicate-imports
         'no-new-symbol': ['error'],
         'no-this-before-super': ['error'],
         'no-useless-computed-key': ['error'],
