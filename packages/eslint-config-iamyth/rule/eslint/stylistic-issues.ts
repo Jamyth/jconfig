@@ -1,27 +1,27 @@
-import type { Linter } from 'eslint';
+import type { Linter } from "eslint";
 
 const stylisticIssues: Linter.Config = {
     rules: {
-        'no-array-constructor': ['error'],
-        'no-mixed-spaces-and-tabs': ['error'],
-        'no-new-object': ['error'],
-        'no-restricted-syntax': [
-            'error',
+        "no-array-constructor": ["error"],
+        "no-mixed-spaces-and-tabs": ["error"],
+        "no-new-object": ["error"],
+        "no-restricted-syntax": [
+            "error",
             {
-                selector: 'ForInStatement',
+                selector: "ForInStatement",
                 message:
-                    'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+                    "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
             },
             {
-                selector: 'WithStatement',
+                selector: "WithStatement",
                 message:
-                    '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+                    "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
             },
         ],
-        'prefer-exponentiation-operator': ['error'],
-        'prefer-object-spread': ['error'],
-        'spaced-comment': ['error', 'always', { exceptions: ['-'] }],
-        'unicode-bom': ['error'],
+        "prefer-exponentiation-operator": ["error"],
+        "prefer-object-spread": ["error"],
+        "spaced-comment": ["error", "always", { exceptions: ["-"] }],
+        "unicode-bom": ["error"],
     },
 };
 

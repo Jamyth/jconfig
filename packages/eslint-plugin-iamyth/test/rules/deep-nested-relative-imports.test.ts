@@ -1,9 +1,9 @@
-import { TSESLint } from '@typescript-eslint/experimental-utils';
-import type { MessageIds } from '../../src/rules/deep-nested-relative-imports';
-import { name, rule } from '../../src/rules/deep-nested-relative-imports';
-import { createConfig } from '../create-config';
+import { TSESLint } from "@typescript-eslint/experimental-utils";
+import type { MessageIds } from "../../src/rules/deep-nested-relative-imports";
+import { name, rule } from "../../src/rules/deep-nested-relative-imports";
+import { createConfig } from "../create-config";
 
-const messageId: MessageIds = 'deepNestedRelativeImports';
+const messageId: MessageIds = "deepNestedRelativeImports";
 
 const ruleTester = new TSESLint.RuleTester(createConfig());
 

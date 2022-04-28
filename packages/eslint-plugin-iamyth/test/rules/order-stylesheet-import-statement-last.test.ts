@@ -1,9 +1,9 @@
-import { TSESLint } from '@typescript-eslint/experimental-utils';
-import type { MessageIds } from '../../src/rules/order-stylesheet-import-statement-last';
-import { name, rule } from '../../src/rules/order-stylesheet-import-statement-last';
-import { createConfig } from '../create-config';
+import { TSESLint } from "@typescript-eslint/experimental-utils";
+import type { MessageIds } from "../../src/rules/order-stylesheet-import-statement-last";
+import { name, rule } from "../../src/rules/order-stylesheet-import-statement-last";
+import { createConfig } from "../create-config";
 
-const messageId: MessageIds = 'orderStylesheetImportStatementLast';
+const messageId: MessageIds = "orderStylesheetImportStatementLast";
 
 const ruleTester = new TSESLint.RuleTester(createConfig());
 

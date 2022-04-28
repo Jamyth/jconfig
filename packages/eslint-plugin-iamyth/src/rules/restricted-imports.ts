@@ -1,8 +1,8 @@
-import { ESLintUtils } from '@typescript-eslint/experimental-utils';
+import { ESLintUtils } from "@typescript-eslint/experimental-utils";
 
-export type MessageIds = 'restrictedImports';
+export type MessageIds = "restrictedImports";
 
-export const name = 'restricted-imports';
+export const name = "restricted-imports";
 
 type Option = {
     path: string;
@@ -12,38 +12,37 @@ type Option = {
 export const rule = ESLintUtils.RuleCreator((name) => name)<Option, MessageIds>({
     name,
     meta: {
-        type: 'suggestion',
+        type: "suggestion",
         docs: {
             description: `Whitelists specified import by folder path. Example: rule: ["error", {"packages": ["antd"], "path": "shared"}] Will only allow antd imports in file which path includes shared. `,
-            category: 'Best Practices',
-            recommended: 'error',
+            recommended: "error",
         },
-        fixable: 'code',
+        fixable: "code",
         messages: {
-            restrictedImports: '{{nodeSource}} can only be imported in {{path}}',
+            restrictedImports: "{{nodeSource}} can only be imported in {{path}}",
         },
         schema: {
-            type: 'array',
+            type: "array",
             items: {
-                $ref: '#/definitions/WhitelistConfig',
+                $ref: "#/definitions/WhitelistConfig",
             },
             definitions: {
                 WhitelistConfig: {
-                    type: 'object',
+                    type: "object",
                     additionalProperties: false,
                     properties: {
                         path: {
-                            type: 'string',
+                            type: "string",
                         },
                         packages: {
-                            type: 'array',
+                            type: "array",
                             items: {
-                                type: 'string',
+                                type: "string",
                             },
                         },
                     },
-                    required: ['packages', 'path'],
-                    title: 'WhitelistConfig',
+                    required: ["packages", "path"],
+                    title: "WhitelistConfig",
                 },
             },
         },
@@ -60,7 +59,7 @@ export const rule = ESLintUtils.RuleCreator((name) => name)<Option, MessageIds>(
                     if (whitelistPath && !fileName.includes(`/${whitelistPath}/`)) {
                         context.report({
                             node,
-                            messageId: 'restrictedImports',
+                            messageId: "restrictedImports",
                             data: { path: whitelistPath, nodeSource },
                         });
                     }

@@ -1,9 +1,9 @@
-import { TSESLint } from '@typescript-eslint/experimental-utils';
-import type { MessageIds } from '../../src/rules/// {{KEBAB_CASE_RULE_NAME}}';
-import { name, rule } from '../../src/rules/// {{KEBAB_CASE_RULE_NAME}}';
-import { createConfig } from '../create-config';
+import { TSESLint } from "@typescript-eslint/experimental-utils";
+import type { MessageIds } from "../../src/rules/// {{KEBAB_CASE_RULE_NAME}}";
+import { name, rule } from "../../src/rules/// {{KEBAB_CASE_RULE_NAME}}";
+import { createConfig } from "../create-config";
 
-const messageId: MessageIds = '// {{CAMEL_CASE_RULE_NAME}}';
+const messageId: MessageIds = "// {{CAMEL_CASE_RULE_NAME}}";
 
 const ruleTester = new TSESLint.RuleTester(createConfig());
 

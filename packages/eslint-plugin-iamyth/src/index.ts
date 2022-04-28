@@ -1,3 +1,3 @@
-import { recommended } from './config/recommended';
+import { recommended } from "./config/recommended";
 export const configs = { recommended };
-export { rules } from './rules';
+export { rules } from "./rules";

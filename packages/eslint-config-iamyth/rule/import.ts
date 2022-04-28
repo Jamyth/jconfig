@@ -1,12 +1,12 @@
-import type { Linter } from 'eslint';
+import type { Linter } from "eslint";
 
 const config: Linter.Config = {
-    plugins: ['import'],
+    plugins: ["import"],
     rules: {
-        'import/first': ['error'],
-        'import/newline-after-import': ['error'],
-        'import/no-anonymous-default-export': [
-            'error',
+        "import/first": ["error"],
+        "import/newline-after-import": ["error"],
+        "import/no-anonymous-default-export": [
+            "error",
             {
                 allowArray: false,
                 allowArrowFunction: false,
@@ -17,11 +17,11 @@ const config: Linter.Config = {
                 allowObject: true,
             },
         ],
-        'import/no-default-export': ['error'],
-        'import/no-duplicates': ['error'],
-        'import/no-dynamic-require': ['error'],
-        'import/no-useless-path-segments': ['error', { noUselessIndex: false }],
-        'import/prefer-default-export': 'off',
+        "import/no-default-export": ["error"],
+        "import/no-duplicates": ["error"],
+        "import/no-dynamic-require": ["error"],
+        "import/no-useless-path-segments": ["error", { noUselessIndex: false }],
+        "import/prefer-default-export": "off",
     },
 };
 

@@ -1,8 +1,8 @@
-import type { Linter } from 'eslint';
-import recommendedRules from './iamyth/recommended';
+import type { Linter } from "eslint";
+import recommendedRules from "./iamyth/recommended";
 
 const config: Linter.Config = {
-    plugins: ['iamyth'],
+    plugins: ["iamyth"],
     rules: {
         ...recommendedRules.rules,
     },

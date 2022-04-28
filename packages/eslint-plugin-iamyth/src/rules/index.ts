@@ -4,11 +4,11 @@
 //              Run "yarn export-rules" to regenerate this file
 // -----------------------------------------------------------------------------
 
-import type { RuleListener, RuleModule } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
-import {rule as deepNestedRelativeImports} from "./deep-nested-relative-imports";
-import {rule as orderStylesheetImportStatementLast} from "./order-stylesheet-import-statement-last";
-import {rule as restrictedImports} from "./restricted-imports";
-import {rule as unnecessaryEndingIndex} from "./unnecessary-ending-index";
+import type { RuleListener, RuleModule } from "@typescript-eslint/utils/dist/ts-eslint";
+import { rule as deepNestedRelativeImports } from "./deep-nested-relative-imports";
+import { rule as orderStylesheetImportStatementLast } from "./order-stylesheet-import-statement-last";
+import { rule as restrictedImports } from "./restricted-imports";
+import { rule as unnecessaryEndingIndex } from "./unnecessary-ending-index";
 
 export const rules: Record<string, RuleModule<string, any[], RuleListener>> = {
     "deep-nested-relative-imports": deepNestedRelativeImports,

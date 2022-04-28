@@ -28,9 +28,9 @@ Open your root `.eslintrc.js`
 ```js
 /** @type {import('eslint').Linter.Config} */
 const config = {
-    extends: ['iamyth/preset/node'],
+    extends: ["iamyth/preset/node"],
     parserOptions: {
-        project: './tsconfig.json',
+        project: "./tsconfig.json",
         tsconfigRootDir: __dirname,
     },
 };

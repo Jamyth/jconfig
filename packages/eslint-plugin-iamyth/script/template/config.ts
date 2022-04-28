@@ -4,7 +4,7 @@
 //              Run "yarn codegen" to regenerate this file
 // -----------------------------------------------------------------------------
 
-import type * as ESLint from 'eslint';
+import type * as ESLint from "eslint";
 
 export const recommended: ESLint.Linter.Config = {
     rules: {

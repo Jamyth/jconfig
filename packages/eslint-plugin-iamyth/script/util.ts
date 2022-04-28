@@ -8,9 +8,9 @@ function isSnakeCase(string: string): boolean {
 
 function toCamelCase(string: string) {
     if (!(isKebabCase(string) || isSnakeCase(string))) {
-        throw new Error('[NamingUtil]: toCamelCase must be called with kebab case or snake case');
+        throw new Error("[NamingUtil]: toCamelCase must be called with kebab case or snake case");
     }
-    return string.replace(/([-_][a-z])/g, (group) => group.toUpperCase().replace('-', '').replace('_', ''));
+    return string.replace(/([-_][a-z])/g, (group) => group.toUpperCase().replace("-", "").replace("_", ""));
 }
 
 function toPascalCase(string: string) {

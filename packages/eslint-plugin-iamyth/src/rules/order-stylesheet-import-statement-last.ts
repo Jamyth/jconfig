@@ -1,22 +1,21 @@
-import type { TSESTree } from '@typescript-eslint/experimental-utils';
-import { AST_NODE_TYPES, ESLintUtils } from '@typescript-eslint/experimental-utils';
+import type { TSESTree } from "@typescript-eslint/experimental-utils";
+import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/experimental-utils";
 
-export type MessageIds = 'orderStylesheetImportStatementLast';
+export type MessageIds = "orderStylesheetImportStatementLast";
 
-export const name = 'order-stylesheet-import-statement-last';
+export const name = "order-stylesheet-import-statement-last";
 
 export const rule = ESLintUtils.RuleCreator((name) => name)<[], MessageIds>({
     name,
     meta: {
-        type: 'suggestion',
+        type: "suggestion",
         docs: {
-            description: '',
-            category: 'Best Practices',
-            recommended: 'error',
+            description: "",
+            recommended: "error",
         },
-        fixable: 'code',
+        fixable: "code",
         messages: {
-            orderStylesheetImportStatementLast: '',
+            orderStylesheetImportStatementLast: "",
         },
         schema: [],
     },
@@ -38,10 +37,10 @@ export const rule = ESLintUtils.RuleCreator((name) => name)<[], MessageIds>({
                 while (itr < importSource.length) {
                     if (!stylesheetExtensionRegex.test(importSource[itr])) {
                         const importCode =
-                            '\n' + context.getSourceCode().getText(importDeclarations[indexOfStyleSheet]);
+                            "\n" + context.getSourceCode().getText(importDeclarations[indexOfStyleSheet]);
                         context.report({
                             node: importDeclarations[indexOfStyleSheet],
-                            messageId: 'orderStylesheetImportStatementLast',
+                            messageId: "orderStylesheetImportStatementLast",
                             fix: (fixer) => [
                                 fixer.remove(importDeclarations[indexOfStyleSheet]),
                                 fixer.insertTextAfter(importDeclarations[importDeclarations.length - 1], importCode),

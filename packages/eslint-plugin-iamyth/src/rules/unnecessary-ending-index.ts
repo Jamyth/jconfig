@@ -1,21 +1,20 @@
-import { ESLintUtils } from '@typescript-eslint/experimental-utils';
+import { ESLintUtils } from "@typescript-eslint/experimental-utils";
 
-export type MessageIds = 'unnecessaryEndingIndex';
+export type MessageIds = "unnecessaryEndingIndex";
 
-export const name = 'unnecessary-ending-index';
+export const name = "unnecessary-ending-index";
 
 export const rule = ESLintUtils.RuleCreator((name) => name)<[], MessageIds>({
     name,
     meta: {
-        type: 'suggestion',
+        type: "suggestion",
         docs: {
-            description: 'No index at the end of import statements',
-            category: 'Best Practices',
-            recommended: 'error',
+            description: "No index at the end of import statements",
+            recommended: "error",
         },
-        fixable: 'code',
+        fixable: "code",
         messages: {
-            unnecessaryEndingIndex: 'unnecessary ending index',
+            unnecessaryEndingIndex: "unnecessary ending index",
         },
         schema: [],
     },
@@ -26,12 +25,12 @@ export const rule = ESLintUtils.RuleCreator((name) => name)<[], MessageIds>({
                 const importSourcePath = node.source.value?.toString();
                 if (
                     importSourcePath &&
-                    importSourcePath.endsWith('/index') &&
+                    importSourcePath.endsWith("/index") &&
                     !isAllowedImportIndexPath(importSourcePath)
                 ) {
                     context.report({
                         node,
-                        messageId: 'unnecessaryEndingIndex',
+                        messageId: "unnecessaryEndingIndex",
                         fix: (fixer) => fixer.replaceText(node.source, node.source.raw.replace(/\/index"/, '"')),
                     });
                 }
@@ -41,5 +40,5 @@ export const rule = ESLintUtils.RuleCreator((name) => name)<[], MessageIds>({
 });
 
 function isAllowedImportIndexPath(importSourcePath: string): boolean {
-    return importSourcePath === './index' || /^(\.\.\/)+index$/.test(importSourcePath);
+    return importSourcePath === "./index" || /^(\.\.\/)+index$/.test(importSourcePath);
 }
