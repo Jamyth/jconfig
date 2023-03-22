@@ -64,13 +64,13 @@ const config: Linter.Config = {
 
                         'public-decorated-field',  'protected-decorated-field',  'private-decorated-field',
                         'public-instance-field',   'protected-instance-field',   'private-instance-field',
-                        'public-abstract-field',   'protected-abstract-field',   'private-abstract-field',
+                        'public-abstract-field',   'protected-abstract-field',
 
                         'public-constructor',      'protected-constructor',      'private-constructor',
 
                         'public-decorated-method', 'protected-decorated-method', 'private-decorated-method',
                         'public-instance-method',  'protected-instance-method',  'private-instance-method',
-                        'public-abstract-method',  'protected-abstract-method',  'private-abstract-method',
+                        'public-abstract-method',  'protected-abstract-method',
                     ],
                     order: 'as-written',
                 }
